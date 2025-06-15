@@ -50,7 +50,7 @@ class Heap <T extends Comparable <T>>{
         }
         return temp;
     }
-    private void downheap(int index){
+    protected void downheap(int index){
         int min =index;
         int left=left(index);
         int right=right(index);
@@ -71,6 +71,13 @@ class Heap <T extends Comparable <T>>{
             data.add(remove());
         }
         return data;        
+    }
+    public int size(){
+        return list.size();
+    }
+
+    protected void printList(){
+        System.out.println(list);
     }
 
      

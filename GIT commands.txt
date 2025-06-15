@@ -1,0 +1,96 @@
+GIT and GITHUB
+---------------
+
+Git — The Tool
+Git is a local version control system (VCS).
+Git is the engine. GitHub is the garage where you park your car.
+Git manages the versions, GitHub stores and shares them.
+
+GitHub — The Platform
+GitHub is a cloud-based hosting service for Git repositories.
+
+Initial Setup
+-------------
+
+* git config --global user.name "Your Name" 
+* git config --global user.email "you@example.com" 
+
+NOTE-Sets your name and email for all Git commits.
+
+Creating a Repository
+---------------------
+
+* git init  -- Initializes a new Git repository in your current folder.
+* git clone origin link  -- Clones an existing repository from GitHub.
+
+Basic Workflow
+---------------
+
+* git status   --Shows the status of changes as untracked, modified, or staged.
+* git add "Text.txt" or git add .  --Stages file(s) for the next commit. Use . to add everything.
+* git commit -m "Your commit message"  --Commits the staged changes with a message.
+
+Sync with Remote
+-----------------
+
+* git push origin branchName (for first time. after that we give only git push)
+* git pull  -- whatever changes made in the online repository that will refelect on our local system.
+* git remote add origin <remote-repo-URL> --This command connects your local Git repo to a remote repository (like GitHub), and gives it the name origin.
+
+Branching
+----------
+
+* git branch  -- Lists all branches(Only local branches).
+* git branch -a	 -- All branches (local + remote).
+* git branch -r  -- Only remote branches.
+* git branch new-branch  -- Creates a new branch.
+* git branch -M branchName -- eg,You're creating a new repo, and Git made the default branch master.You want to       rename it to main, which is the newer convention.
+* git checkout new-branch  -- Switches to a different branch.
+* git checkout -b new-branch  -- Creates and switches to a new branch.
+* git diff branchName (current branch - branchName )  --Shows what’s different from current Files that are different and Lines that were added or removed.
+* git diff <from-branch> <to-branch>  -- eg,Shows what dev has that main doesn’t.
+
+
+Merging
+--------
+
+* git merge branch-name  --Merges another branch into your current one(NOTE-you have to push after this).
+
+Undoing Changes
+----------------
+
+* git restore filename  -- Restores file to last committed state.
+* git reset HEAD filename  -- Unstages a file (but keeps the changes).
+* git log  -- Shows a log of commits.
+
+Delete
+-------
+* git rm notes.txt
+  git commit -m "Deleted notes.txt"  -- This deletes notes.txt and commits that change.
+
+
+Local Version Control with Git
+-------------------------------
+
+Eg-Now Git has saved version 2.
+
+* git log  -- Check the history
+
+You’ll see both commits like:
+
+commit a1b2c3d
+Author: Nishanth
+Message: Version 2: Changed message
+
+commit x1y2z3
+Message: Version 1: Hello World
+
+Go back to version 1
+* git checkout x1y2z3 -- hello.java
+
+
+
+
+
+
+

@@ -21,7 +21,7 @@ Creating a Repository
 ---------------------
 
 * git init  -- Initializes a new Git repository in your current folder.
-* git clone origin link  -- Clones an existing repository from GitHub.
+* git clone  link  -- Clones an existing repository from GitHub.(note adding origin is giving error)
 
 Basic Workflow
 ---------------
